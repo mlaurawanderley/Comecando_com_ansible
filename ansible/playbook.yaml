@@ -1,0 +1,45 @@
+---
+- hosts: localhost
+  become: yes
+  vars:
+    docker_prereqs_packages:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnup-agent
+      - software-properties-common
+    docker_packages:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+  tasks:
+    - name: Print message
+      debug:
+        msg: Hello Ansible World
+
+    - name: Install aptitude
+      apt:
+        name: aptitude
+        state: latest
+        update_cache: true
+        
+    - name: Install docker prereqs
+      apt:
+        name: "{{ item }}"
+        update_cache: true
+      loop: "{{ docker_prereqs_packages }}"
+
+    - name: Add GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add docker repository
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+        
+    - name: Install docker
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+      loop: "{{ docker_packages }}"
