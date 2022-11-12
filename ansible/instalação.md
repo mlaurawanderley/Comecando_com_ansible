@@ -56,5 +56,5 @@ ssh-copy-id -i /root/.ssh/id_rsa.pub <user>@<ip>
 ssh -i /root/.ssh/id_rsa.pub <user>@<ip
 ```
 
-Após cumprir todas essas etapas você está pronto para dar os [Primeiros passos com Ansible](https)
+Após cumprir todas essas etapas você está pronto para dar os [Primeiros passos com Ansible](https://github.com/mlaurawanderley/Comecando_com_ansible/blob/main/ansible/primeiros-passos.md)
 

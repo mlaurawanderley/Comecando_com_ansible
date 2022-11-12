@@ -36,4 +36,4 @@ Windows - https://docs.ansible.com/ansible/latest/installation_guide/installatio
 ___
 No link a seguir estarei demonstrando como fazer a instalação do Ansible usando a distro linux Ubuntu 20.04.4 LTS, usando o subsistema do Windows para o Linux. 
 
-Você pode conferir as instruções para instalação aqui:  [Instalação no Ubuntu wsl](https://github.com/matiassingers/awesome-readme)
+Você pode conferir as instruções para instalação aqui:  [Instalação no Ubuntu wsl](https://github.com/mlaurawanderley/Comecando_com_ansible/blob/main/ansible/instala%C3%A7%C3%A3o.md)
